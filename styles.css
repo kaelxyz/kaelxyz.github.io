@@ -1,72 +1,236 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-}
-
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-header h1 {
-    font-size: 2.5em;
-    color: #007BFF;
-}
-
-header p {
-    font-size: 1.2em;
-    margin: 5px 0;
-}
-
-section {
-    margin-bottom: 20px;
-}
-
-h2 {
-    border-bottom: 2px solid #007BFF;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-    color: #007BFF;
-}
-
-.job, .school {
-    margin-bottom: 15px;
-}
-
-.job h3, .school h3 {
-    font-size: 1.5em;
-    color: #333;
-}
-
-.job p, .school p {
-    margin: 5px 0;
-}
-
-.skills ul {
-    list-style-type: none;
-}
-
-.skills li {
-    background: #007BFF;
-    color: #fff;
-    padding: 5px;
-    margin: 5px 0;
-    border-radius: 5px;
-}
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     margin: 0;
+     padding: 0;
+     line-height: 1.6;
+     color: #333;
+     background-color: #f8f9fa;
+ }
+ 
+ header {
+     background: linear-gradient(135deg, #2c3e50, #1a252f);
+     color: #fff;
+     padding: 0.8rem 0;
+     text-align: center;
+     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+     position: sticky;
+     top: 0;
+     z-index: 1000;
+ }
+ 
+ header h1 {
+     margin: 0;
+     padding: 0;
+     font-size: 1.8rem;
+     font-weight: 600;
+ }
+ 
+ nav {
+     padding: 0.4rem 0;
+ }
+ 
+ nav ul {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+     display: flex;
+     justify-content: center;
+     gap: 1.5rem;
+ }
+ 
+ nav ul li {
+     margin: 0;
+ }
+ 
+ nav ul li a {
+     color: #fff;
+     text-decoration: none;
+     font-weight: 500;
+     font-size: 0.95rem;
+     transition: all 0.3s ease;
+     position: relative;
+     padding: 3px 0;
+ }
+ 
+ nav ul li a:hover {
+     color: #3498db;
+ }
+ 
+ nav ul li a::after {
+     content: '';
+     position: absolute;
+     width: 0;
+     height: 2px;
+     bottom: 0;
+     left: 0;
+     background-color: #3498db;
+     transition: width 0.3s ease;
+ }
+ 
+ nav ul li a:hover::after {
+     width: 100%;
+ }
+ 
+ section {
+     padding: 2.5rem;
+     margin: 1.5rem auto;
+     max-width: 1000px;
+     background-color: white;
+     border-radius: 8px;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+ }
+ 
+ section h2 {
+     color: #2c3e50;
+     border-bottom: 2px solid #3498db;
+     padding-bottom: 0.5rem;
+     margin-bottom: 1.5rem;
+     font-size: 1.8rem;
+ }
+ 
+ section h3 {
+     color: #34495e;
+     margin-top: 1.5rem;
+     margin-bottom: 0.7rem;
+     font-size: 1.3rem;
+ }
+ 
+ ul {
+     padding-left: 1.2rem;
+ }
+ 
+ li {
+     margin-bottom: 0.5rem;
+ }
+ 
+ #cv ul {
+     list-style-type: none;
+     padding-left: 0;
+ }
+ 
+ #cv ul li {
+     padding: 0.5rem 0;
+     border-bottom: 1px dotted #eaeaea;
+ }
+ 
+ #cv ul li:last-child {
+     border-bottom: none;
+ }
+ 
+ #cv p {
+     font-style: italic;
+     background-color: #f5f5f5;
+     padding: 1rem;
+     border-left: 3px solid #3498db;
+     margin: 1rem 0;
+ }
+ 
+ form {
+     max-width: 600px;
+     margin: 0 auto;
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+ }
+ 
+ form input, form textarea {
+     width: 100%;
+     padding: 0.8rem;
+     border: 1px solid #ddd;
+     border-radius: 4px;
+     font-family: inherit;
+     font-size: 1rem;
+     transition: border-color 0.3s ease;
+ }
+ 
+ form input:focus, form textarea:focus {
+     outline: none;
+     border-color: #3498db;
+     box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+ }
+ 
+ form textarea {
+     min-height: 150px;
+     resize: vertical;
+ }
+ 
+ form button {
+     background: #3498db;
+     color: #fff;
+     border: none;
+     padding: 0.8rem 1.5rem;
+     border-radius: 4px;
+     cursor: pointer;
+     font-weight: 600;
+     font-size: 1rem;
+     transition: background-color 0.3s ease;
+     align-self: flex-start;
+ }
+ 
+ form button:hover {
+     background: #2980b9;
+ }
+ 
+ /* Responsive design */
+ @media (max-width: 768px) {
+     section {
+         padding: 1.5rem;
+         margin: 1rem;
+     }
+     
+     nav ul {
+         flex-direction: column;
+         gap: 0.5rem;
+     }
+     
+     form button {
+         align-self: center;
+         width: 100%;
+     }
+ }
+ 
+ #cv .cv-header {
+     display: flex;
+     gap: 2rem;
+     margin-bottom: 2rem;
+     align-items: flex-start;
+ }
+ 
+ #cv .profile-pic {
+     width: 200px;
+     height: 200px;
+     object-fit: cover;
+     border-radius: 50%;
+     border: 4px solid #3498db;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     transition: transform 0.3s ease;
+ }
+ 
+ #cv .profile-pic:hover {
+     transform: scale(1.05);
+ }
+ 
+ #cv .personal-info {
+     flex: 1;
+ }
+ 
+ #cv .personal-info h3 {
+     margin-top: 0;
+ }
+ 
+ @media (max-width: 768px) {
+     #cv .cv-header {
+         flex-direction: column;
+         align-items: center;
+         gap: 1rem;
+     }
+     
+     #cv .profile-pic {
+         width: 150px;
+         height: 150px;
+     }
+     
+     #cv .personal-info {
+         width: 100%;
+     }
+ }
